@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Editor</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Exo|Open+Sans|Roboto|Roboto+Condensed|Roboto+Slab|Source+Serif+Pro" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="editor.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="editor.js"></script>
+</head>
+<body>
+
+	<div class="container-fluid">
+		<div class="flex">
+			<select name="font-family" id="font-family"></select>
+			<select name="font-size" id="font-size"></select>
+			<div id="color" class="flex">
+				<div class="sq32"><i id="text-color" class="material-icons">format_color_text</i></div>				
+				<div id="palette">
+				<div class="colrow flex">
+					<div class="color-btn" style="background-color: #333333" id="333333"></div>
+					<div class="color-btn" style="background-color: #17a2b8" id="17a2b8"></div>
+					<div class="color-btn" style="background-color: #007bff" id="007bff"></div>
+					<div class="color-btn" style="background-color: #6f42c1" id="6f42c1"></div>
+				</div>
+				<div class="colrow flex">
+					<div class="color-btn" style="background-color: #ffc107" id="ffc107"></div>
+					<div class="color-btn" style="background-color: #FF851B" id="FF851B"></div>
+					<div class="color-btn" style="background-color: #dc3545" id="dc3545"></div>
+					<div class="color-btn" style="background-color: #9a6324" id="9a6324"></div>
+				</div>
+				<div class="colrow flex">
+					<div class="color-btn" style="background-color: #20c997" id="20c997"></div>
+					<div class="color-btn" style="background-color: #28a745" id="28a745"></div>
+					<div class="color-btn" style="background-color: #808000" id="808000"></div>
+					<div class="color-btn" style="background-color: #7f8c8d" id="7f8c8d"></div>
+				</div>
+			</div>
+			<div class="sq32"><i id="fill-color" class="material-icons">format_paint</i></div>
+			</div>
+			<div id="simple-formatting" class="flex">
+				<div class="sq32"><i id="bold" class="material-icons">format_bold</i></div>
+				<div class="sq32"><i id="italic" class="material-icons">format_italic</i></div>
+				<div class="sq32"><i id="underline" class="material-icons">format_underline</i></div>
+				<div class="sq32"><i id="strike" class="material-icons">strikethrough_s</i></div>
+				<div class="sq32"><i id="quote" class="material-icons">format_quote</i></div>
+				<div class="sq32"><i id="list_num" class="material-icons">format_list_numbered</i></div>
+				<div class="sq32"><i id="list_bullet" class="material-icons">format_list_bulleted</i></div>
+				<div class="sq32"><i id="indent_inc" class="material-icons">format_indent_increase</i></div>
+				<div class="sq32"><i id="indent_dec" class="material-icons">format_indent_decrease</i></div>
+				<div class="sq32"><i id="format_clear" class="material-icons">format_clear</i></div>
+			</div>
+			<div id="insert_obj" class="flex">
+				<div class="sq32"><i id="insert_link" class="material-icons">insert_link</i></div>
+				<div class="sq32"><i id="insert_image" class="material-icons">insert_photo</i></div>
+				<div class="sq32"><i id="insert_fun" class="material-icons">functions</i></div>
+				<div class="sq32"><i id="insert_tbl" class="material-icons">border_all</i></div>
+			</div>
+		</div>
+		<div id="textarea" contenteditable="true"></div>
+		<div id="displayMarkup"></div>
+		<div id="displayText"></div>
+	</div>
+
+</body>
+</html>
